@@ -1,42 +1,42 @@
-const Age = prompt("Write your year of birth");
-const City = prompt("Write your city");
-const Sport = prompt("Write your favorite sport")
+const age = prompt("Write your year of birth");
+const city = prompt("Write your city");
+const sport = prompt("Write your favorite sport")
 
-if (Age == false) {
+if (!age) {
     alert("You dodn't write your age.");
 } else {
-    alert(`You will be ${2023 - Age} years old in 2023.`);
+    alert(`You will be ${2023 - age} years old in 2023.`);
 }
 
 
-if (!City) {
+if (!city) {
   alert("You dodn't write your city");
 } 
-else if (City === "Kyiv") {
+else if (city === "Kyiv") {
   alert("You live in Ukraine");
 }
-else if (City === "London"){
+else if (city === "London"){
   alert("You live in Great Britain");
 } 
-else if (City === "Washington"){
+else if (city === "Washington"){
   alert("You live in USA")
 }
 else {
-  alert('You live in ' + City);
+  alert('You live in ' + city);
 }
 
-if (!Sport) {
+if (!sport) {
   alert("You don`t write a sport")
 } 
-else if(Sport === "Football"){
+else if(sport === "Football"){
   alert("Your goal is become a C.Ronaldo?");
 }
-else if (Sport === "Cybersport"){
+else if (sport === "Cybersport"){
   alert("Your goal is become a S1mple?");
 }
-else if (Sport === "Basketball"){
+else if (sport === "Basketball"){
   alert("Your goal is become a M.Jordan?")
 }
 else {
-  alert("Your sport is " + Sport)  
+  alert("Your sport is " + sport) 
 }
