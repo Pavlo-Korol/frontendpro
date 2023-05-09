@@ -1,42 +1,61 @@
-const age = prompt("Write your year of birth");
-const city = prompt("Write your city");
-const sport = prompt("Write your favorite sport")
 
-if (!age) {
-    alert("You dodn't write your age.");
+// first task
+for (let i = 20; i < 30 ; i += 0.5 ){
+  console.log(i)
+}
+
+// second task
+const hrn = 27
+let dollar = 10
+for ( dollar ; dollar <=100; dollar +=10 ){
+  console.log(hrn * dollar)
+}
+
+// third task 
+const x = prompt("Write your number");
+for (let i = 1; i <= 100; i++) {
+  if (i * i <= x) {
+    console.log(i);
+  }
+}
+
+// fourth task 
+
+const number = prompt("Write your number");
+
+let check = true;
+
+if (number > 1) {
+  for (let i = 2; i < number; i++) {
+    if (number % i === 0) {
+      check = false;
+      break;
+    }
+  }
 } else {
-    alert(`You will be ${2023 - age} years old in 2023.`);
+  check = false;
+}
+
+if (check) {
+  console.log(`${number} is true number`);
+} else {
+  console.log(`${number} is not true number`);
 }
 
 
-if (!city) {
-  alert("You dodn't write your city");
-} 
-else if (city === "Kyiv") {
-  alert("You live in Ukraine");
-}
-else if (city === "London"){
-  alert("You live in Great Britain");
-} 
-else if (city === "Washington"){
-  alert("You live in USA")
-}
-else {
-  alert('You live in ' + city);
+// Fifth Task 
+
+const num = prompt("Write your number");
+
+function isPowerOfThree(num) {
+  while (num > 1) {
+    num = num / 3;
+  }
+  return num === 1;
 }
 
-if (!sport) {
-  alert("You don`t write a sport")
-} 
-else if(sport === "Football"){
-  alert("Your goal is become a C.Ronaldo?");
-}
-else if (sport === "Cybersport"){
-  alert("Your goal is become a S1mple?");
-}
-else if (sport === "Basketball"){
-  alert("Your goal is become a M.Jordan?")
-}
-else {
-  alert("Your sport is " + sport) 
+if (isPowerOfThree(num)) {
+  console.log(`${num} can be obtained by raising the number 3 to a certain power.`);
+} else {
+  console.log(`${num} CANNOT be obtained by raising the number 3 to some power.`);
 }
