@@ -55,13 +55,20 @@ let users = [
   }
   ]
   
-
+let sumBalance = 0
 const telNumber = users.filter(function (user) {
   const money = parseFloat(user.balance.replace("$","").replace(",",""));
   return money > 2000;
 }).map(function (user) {
   return user.phone;
 });
+const usersBalance = users.map(function(element) { const money = parseFloat(element.balance.replace("$","").replace(",","")); 
+return money
+})
 
+for (let i = 0; i < usersBalance.length; i++) {
+  sumBalance += usersBalance[i];
+}
 
 console.log(telNumber)
+console.log('Summ of users balances is : ' + sumBalance.toFixed(1))
