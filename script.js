@@ -8,7 +8,7 @@ function sumWithClosure() {
 
 const sum = sumWithClosure();
 
-console.log(sum(3)); // 3
-console.log(sum(5)); // 8
-console.log(sum(20)); // 28
+console.log(sum(3)); 
+console.log(sum(5)); 
+console.log(sum(20)); 
 
