@@ -1,10 +1,14 @@
-function getPow(num, degree){
-  if (degree === 0) {
-    return 1;
+function sumWithClosure() {
+  let sum = 0;
+  return function(num) {
+    sum += num;
+    return sum;
   }
-  if (degree === 1) {
-    return num;
-  }
-  return num * getPow(num, degree - 1);
 }
+
+const sum = sumWithClosure();
+
+console.log(sum(3)); // 3
+console.log(sum(5)); // 8
+console.log(sum(20)); // 28
 
